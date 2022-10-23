@@ -1,4 +1,6 @@
 
+document.querySelector('.new-item input[type=date]').valueAsDate = new Date();
+
 document.querySelector('.create-to-do').addEventListener('click', function(){
     document.querySelector('.new-item').style.display='block';
 });
@@ -19,7 +21,7 @@ input.addEventListener("keypress", function(event) { 
             saveItems(itemsArr);
             fetchItems();
             document.querySelector('.new-item input[type=text]').value='';
-            document.querySelector('.new-item').style.display='none';
+            // document.querySelector('.new-item').style.display='none';
         }
     }});
 
@@ -65,6 +67,30 @@ function fetchItems(){
     }
 }
 
+document.querySelector('.sort-by-date').addEventListener('click', function(){
+    var itemsStorage = localStorage.getItem('to-do-items');
+    var itemsArr = JSON.parse(itemsStorage);
+    console.log(itemsArr);
+    console.log(itemsArr[0].date);
+    x = [...Array(itemsArr.length).keys()];
+    console.log(x);
+    console.log("abc");
+    y = itemsArr.sort((a,b) => (Date(a.date) < Date(b.date)) ? 1 : 0);
+    console.log(y);
+    // console.log(itemsArr.sort((a,b) => a.date >= b.date));
+    
+});
+
+document.querySelector('.hide-done').addEventListener('click', function(){
+    var itemsStorage = localStorage.getItem('to-do-items');
+    var itemsArr = JSON.parse(itemsStorage);
+    console.log(itemsArr);
+    itemsArr = itemsArr.filter(a => a.status != 1);
+    console.log(itemsArr);
+    // console.log(itemsArr.sort((a,b) => a.date >= b.date));
+    saveVisible(itemsArr);
+});
+
 function itemComplete(index){
 
     var itemsStorage = localStorage.getItem('to-do-items');
@@ -89,6 +115,11 @@ function itemDelete(index){
     itemsArr.splice(index, 1);
     saveItems(itemsArr);
     document.querySelector('ul.to-do-items li[data-itemindex="'+index+'"]').remove();
+}
+
+function saveVisible(obj){
+    var string = JSON.stringify(obj);
+    localStorage.setItem('visible-items', string);
 }
 
 function saveItems(obj){

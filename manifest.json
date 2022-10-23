@@ -1,10 +1,14 @@
 {
   "name": "ToDoLoo",
-  "version": "0.01",
+  "version": "0.02",
   "description": "Stay focused and get work done",
 	"browser_action": {
 		"default_title": "ToDoLoo",
 		"default_popup": "popout.html"
 	},
+  "chrome_url_overrides":{
+    "newtab": "newtab.html"
+  },
+  "devtools_page": "devtools.html",
   "manifest_version": 2
 }

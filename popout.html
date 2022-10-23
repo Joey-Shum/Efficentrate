@@ -1,9 +1,14 @@
 <!DOCTYPE html>
   <head>
     <meta charset="utf-8">
-    <title>Todo List </title>
+    <title>To do List </title>
     <style>
-      body{width: 300px;}
+      body{
+        width: 300px;
+        justify-content: space-between;
+        flex-direction: column;
+        margin: 30px;
+      }
       .to-do-items, .to-do-items li{
         margin: 0;
         padding: 0;
@@ -33,12 +38,26 @@
         display: flex;
         justify-content: space-between;
       }
+      .buttons{
+        justify-content: space-between;
+        flex-direction: row;
+        display: flex;
+      }
+      .create-to-do, .sort-by-date, .hide-done{
+        border-radius: 8px;
+        border-width: thin;
+        background-color: antiquewhite;
+        margin-bottom: 15px;
+      }
     </style>
   </head>
   <body>
-    <h1>My Todo's</h1>
-
-    <button class="create-to-do">New Item</button>
+    <h1>My To-Do's</h1>
+    <span class="buttons">
+      <button class="create-to-do">New Item</button>
+      <button class="sort-by-date">Sort</button>
+      <button class="hide-done">Hide Done</button>
+    </span>
     <div class="new-item">
       <input type="date">
       <input type="text"/>
