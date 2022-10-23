@@ -1,0 +1,10 @@
+{
+  "name": "ToDoLoo",
+  "version": "0.01",
+  "description": "Stay focused and get work done",
+	"browser_action": {
+		"default_title": "ToDoLoo",
+		"default_popup": "popout.html"
+	},
+  "manifest_version": 2
+}

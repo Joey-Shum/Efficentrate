@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="utf-8">
+    <title>Todo List </title>
+    <style>
+      body{width: 300px;}
+      .to-do-items, .to-do-items li{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+      .to-do-items li{
+        padding: 10px;
+        border-bottom: 2px solid grey;
+        display: flex;
+        justify-content: space-between;
+      }
+      .to-do-items li:hover{
+        background: rgba(0,0,0,0.25);
+      }
+      .to-do-items li.done .item, li.done .date{
+        text-decoration: line-through;
+      }
+      .to-do-items li.pending .item, li.pending.date{
+        text-decoration: none;
+      }
+      .to-do-items div span{
+        margin: 5px;
+        font-size: 1em;
+        cursor: pointer;
+      }
+      .new-item{
+        display: flex;
+        justify-content: space-between;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>My Todo's</h1>
+
+    <button class="create-to-do">New Item</button>
+    <div class="new-item">
+      <input type="date">
+      <input type="text"/>
+    </div>
+    
+    <ul class="to-do-items">
+    </ul>
+    <script src="popout.js"></script>
+  </body>
+</html>
