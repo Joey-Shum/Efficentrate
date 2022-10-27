@@ -1,6 +1,6 @@
 {
   "name": "ToDoLoo",
-  "version": "0.03",
+  "version": "0.04",
   "description": "Stay focused and get work done",
 	"browser_action": {
 		"default_title": "ToDoLoo",
@@ -8,6 +8,10 @@
 	},
   "chrome_url_overrides":{
     "newtab": "newtab.html"
+  },
+  "background":{
+    "page": "background.html",
+    "persistent": true
   },
   "manifest_version": 2
 }

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="utf-8">
+    <title>Timer Page</title>
+    <style>
+      body{
+        width: 400px;
+        justify-content: space-between;
+        margin: 30px;
+      }
+      h2{
+        text-align: center;
+      }
+      section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+      .study-start, .study-pause{
+        border-radius: 8px;
+        border-width: thin;
+        background-color: antiquewhite;
+        margin-bottom: 15px;
+      }
+      .buttons-timer{
+        justify-content: center;
+        display: flex;
+        align-items: center;
+      }
+      .study-pause{
+        display: none;
+      }
+      
+    </style>
+  </head>
+
+  <body>
+    <h1>Pomodoro Timer</h1>
+    <h2 id="h2-timer">00:00</h2>
+    <span class="buttons-timer">
+      <button class="study-start">Start / Continue</button>
+      <button class="study-pause">Pause</button>
+    </span>
+    <script src="timer.js"></script>
+  </body>

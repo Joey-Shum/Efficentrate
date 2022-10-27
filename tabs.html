@@ -1,12 +1,10 @@
-
-
 <!DOCTYPE html>
     <head>
         <meta charset="utf-8">
         <title>To do List </title>
         <style>
             body{
-                width: 300px;
+                width: 400px;
                 justify-content: space-between;
                 flex-direction: column;
                 margin: 30px;
@@ -44,9 +42,9 @@
             }
 
             /* Style the tab content */
-            .to-do-content, .music-content, .block-content {
+            .to-do-content, .music-content, .timer-content {
             display: none;
-            padding: 6px 12px;
+            /* padding: 6px 12px; */
             /* border: 1px solid #ccc; */
             border-top: none;
             }
@@ -57,25 +55,16 @@
         <div class="tab">
             <button class="to-do">To-Do</button>
             <button class="music">Music</button>
-            <button class="block">Blocked sites</button>
+            <button class="timer">Timer</button>
         </div>
     
         <!-- Tab content -->
-        <div id ="to-do-content" class="to-do-content">
-            <!-- <h3>To-Do</h3>
-            <p>London is the capital city of England.</p> -->
-            <!-- <a href="popout.html"> -->
-        </div>
+        <div id ="to-do-content" class="to-do-content"></div>
         
-        <div class="music-content">
-            <h3>Music</h3>
-            <p>Paris is the capital of France.</p>
-        </div>
-        
-        <div class="block-content">
-            <h3>Blocked sites</h3>
-            <p>Tokyo is the capital of Japan.</p>
-        </div>
+        <div id ="music-content" class="music-content"></div>
+
+        <div id ="timer-content" class="timer-content"></div>
+
         <script src="tabs.js"></script>
     </body>
 </html>

@@ -4,7 +4,7 @@
     <title>To do List </title>
     <style>
       body{
-        width: 300px;
+        width: 400px;
         justify-content: space-between;
         flex-direction: column;
         margin: 30px;
@@ -23,10 +23,10 @@
       .to-do-items li:hover{
         background: rgba(0,0,0,0.25);
       }
-      .to-do-items li.done .item, li.done .date{
+      .to-do-items li.done .item, .to-do-items li.done .date{
         text-decoration: line-through;
       }
-      .to-do-items li.pending .item, li.pending.date{
+      .to-do-items li.pending .item, .to-do-items li.pending .date{
         text-decoration: none;
       }
       .to-do-items div span{
@@ -60,7 +60,7 @@
     </span>
     <div class="new-item">
       <input type="date">
-      <input type="text"/>
+      <input type="text" placeholder="enter item"/>
     </div>
     
     <ul class="to-do-items">
