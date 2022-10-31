@@ -252,6 +252,14 @@ return `
 };
   
 switch (window.location.hostname) {
+  case "twitter.com":
+        document.head.innerHTML = generateSTYLES();
+        document.body.innerHTML = generateHTML("TWITTER");
+        break;
+  case "www.instagram.com":
+        document.head.innerHTML = generateSTYLES();
+        document.body.innerHTML = generateHTML("INSTAGRAM");
+        break;
     case "www.youtube.com":
         document.head.innerHTML = generateSTYLES();
         document.body.innerHTML = generateHTML("YOUTUBE");
