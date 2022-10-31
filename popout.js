@@ -34,6 +34,7 @@ function fetchItems(){
     try{
         var itemsStorage = localStorage.getItem('to-do-items');
         var itemsArr = JSON.parse(itemsStorage);
+        console.log(itemsArr);
         for (var i = 0; i < itemsArr.length; i++) {
             var status = '';
             if(itemsArr[i].status == 1) {
@@ -128,4 +129,3 @@ function saveItems(obj){
 }
 
 fetchItems();
-

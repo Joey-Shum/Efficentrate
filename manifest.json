@@ -1,9 +1,9 @@
 {
-  "name": "ToDoLoo",
-  "version": "0.04",
-  "description": "Stay focused and get work done",
+  "name": "Efficentrate",
+  "version": "0.05",
+  "description": "Efficiency and concentration booster",
 	"browser_action": {
-		"default_title": "ToDoLoo",
+		"default_title": "Efficentrate",
 		"default_popup": "tabs.html"
 	},
   "chrome_url_overrides":{
@@ -13,5 +13,15 @@
     "page": "background.html",
     "persistent": true
   },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "permissions": [
+    "storage",
+    "https://www.youtube.com/*"
+  ],
   "manifest_version": 2
 }

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="utf-8">
+    <title>To do List </title>
+    <style>
+      body{
+        width: 400px;
+        justify-content: space-between;
+        flex-direction: column;
+        margin: 30px;
+      }
+      .to-block-items, .to-block-items li{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+      .to-block-items li{
+        padding: 10px;
+        border-bottom: 2px solid grey;
+        display: flex;
+        justify-content: space-between;
+      }
+      .to-block-items li:hover{
+        background: rgba(0,0,0,0.25);
+      }
+      .to-block-items li.done .item, li.done{
+        text-decoration: line-through;
+      }
+      .to-block-items li.pending .item, li.pending{
+        text-decoration: none;
+      }
+      .to-block-items div span{
+        margin: 5px;
+        font-size: 1em;
+        cursor: pointer;
+      }
+      .new-item{
+        display: flex;
+        justify-content: space-between;
+      }
+      .buttons{
+        justify-content: space-between;
+        flex-direction: row;
+        display: flex;
+      }
+      .create-to-block{
+        border-radius: 8px;
+        border-width: thin;
+        background-color: antiquewhite;
+        margin-bottom: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Block Sites</h1>
+    <div class="new-item">
+      <input type="text" placeholder="site name" id="text-name"/>
+      <input type="text" placeholder="site host" id="text-host"/>
+    </div>
+    
+    <ul class="to-block-items">
+    </ul>
+    <script src="block.js"></script>
+  </body>
+
+</html>

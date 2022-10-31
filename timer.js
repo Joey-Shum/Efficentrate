@@ -1,4 +1,4 @@
-var timeSecond = 30;
+var timeSecond = 1500;
 var timeH = document.querySelector("h2");
 
 function displayTime(second) {
